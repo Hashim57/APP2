@@ -1,0 +1,7 @@
+__pycache
+.venv
+.vscode
+.idea
+*.txt
+*csv
+.env
