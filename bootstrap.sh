@@ -1,13 +1,13 @@
 #! /usr/bin/bash
 
-function bootstrap(){
+function bootstrap() {
     mkdir "$1"
     cd "$1"
     mkdir src tests
     cd src
     mkdir core
     cd ..
-    python -m venv .venv
+    python3 -m venv .venv
     git init
     touch .gitignore
     echo "__pycache" >> ./.gitignore
@@ -20,15 +20,13 @@ function bootstrap(){
     git add .
     git commit -m "bootstrap"
     cd "$1"
-    code .
-
-
+    code . 
 }
 
-# if [[ -d "$1"]]; then
-#     echo "Project Alreday Exists"
-# else
-bootstrap $1
-# fi 
+if [[ -d "$1" ]]; then
+    echo "Project Alreday Exists"
+else
+    bootstrap $1
+fi 
 
-# exit 
+exit 
