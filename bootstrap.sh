@@ -6,6 +6,8 @@ function bootstrap() {
     mkdir src tests
     cd src
     mkdir core
+    cd app2.py
+    mkdir app2
     cd ..
     python3 -m venv .venv
     git init
@@ -15,18 +17,17 @@ function bootstrap() {
     echo ".vscode" >> ./.gitignore
     echo ".idea" >> ./.gitignore
     echo "*.txt" >> ./.gitignore
-    echo "*csv" >> ./.gitignore
+    echo "*.csv" >> ./.gitignore
     echo ".env" >> ./.gitignore
     git add .
     git commit -m "bootstrap"
     cd "$1"
-    code . 
 }
 
-if [[ -d "$1" ]]; then
-    echo "Project Alreday Exists"
-else
-    bootstrap $1
-fi 
+# if [[ -d "$1" ]]; then
+#     echo "Project Alreday Exists"
+# else
+bootstrap $1
+# fi 
 
-exit 
+# exit 

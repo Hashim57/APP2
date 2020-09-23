@@ -3,5 +3,12 @@ __pycache
 .vscode
 .idea
 *.txt
-*csv
+*.csv
+.env
+__pycache
+.venv
+.vscode
+.idea
+*.txt
+*.csv
 .env
