@@ -2,11 +2,13 @@ import mysql
 import mysql.connector
 import pymysql
 
+from config import mydb, cursor
 
-mydb = mysql.connector.connect(
-    host ="localhost", user ="root", password= "insecure",  database= "mynursery", port= "33066", auth_plugin= "mysql_native_password" )
 
-cursor = mydb.cursor()
+# mydb = mysql.connector.connect(
+#     host ="localhost", user ="root", password= "insecure",  database= "mynursery", port= "33066")
+
+# cursor = mydb.cursor()
 
 
 

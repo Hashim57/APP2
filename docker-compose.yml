@@ -8,6 +8,8 @@ services:
       MYSQL_ROOT_PASSWORD: "insecure"
     ports:
       - "33066:3306"
+    socket:
+      - /var/run/mysqld/mysqld.sock
     volumes:
       - db-data:/var/lib/mysql/data
   adminer:
