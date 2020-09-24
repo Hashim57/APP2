@@ -6,7 +6,7 @@ function bootstrap() {
     mkdir src tests
     cd src
     mkdir core
-    cd app2.py
+    cd app2
     mkdir app2
     cd ..
     python3 -m venv .venv
